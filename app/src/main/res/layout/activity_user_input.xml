@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    tools:context=".UserInputActivity">
+
+    <Button
+        android:id="@+id/ui_password_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/ui_show_button"
+        android:onClick="showText"/>
+
+    <EditText
+        android:id="@+id/ui_password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/ui_password_button"
+        android:layout_toLeftOf="@+id/ui_password_button"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/ui_password_editText" />
+
+    <Button
+        android:id="@+id/ui_email_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ui_password_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/ui_show_button"
+        android:onClick="showText"/>
+
+    <EditText
+        android:id="@+id/ui_email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ui_password_editText"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/ui_email_button"
+        android:layout_toLeftOf="@+id/ui_email_button"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/ui_email_editText"/>
+    <LinearLayout
+        android:id="@+id/ui_phone_entry_LinerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/ui_phone_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ui_phone_editText"
+            android:inputType="phone" />
+
+        <Spinner
+            android:id="@+id/ui_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/ui_phone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showText"
+            android:text="@string/ui_show_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ui_phone_display_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/ui_email_textView">
+
+        <TextView
+            android:id="@+id/ui_phoneLabelTitle_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_phoneLabelTitle_textView"/>
+
+        <TextView
+            android:id="@+id/ui_phoneLabelText_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_nothingEntered_textView"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ui_email_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ui_email_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/ui_alert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ui_phone_entry_LinerLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:onClick="onClickShowAlert"
+        android:text="@string/ui_alert_button" />
+
+    <Button
+        android:id="@+id/ui_OnClickListener_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ui_phone_entry_LinerLayout"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ui_alert_button"
+        android:layout_toRightOf="@+id/ui_alert_button"
+        android:text="@string/ui_OnClickListener_button" />
+    <LinearLayout
+        android:id="@+id/ui_date_time_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_alert_button"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/ui_dateAndTime_message"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/ui_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/ui_date_button"
+                android:onClick="showDatePickerDialog" />
+            <Button
+                android:id="@+id/ui_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_toRightOf="@id/ui_date_button"
+                android:layout_toEndOf="@id/ui_date_button"
+                android:text="@string/ui_time_button"
+                android:onClick="showTimePickerDialog"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ui_date_time_LinearLayout"
+        android:layout_above="@id/ui_phone_display_LinearLayout"
+        android:padding="@dimen/activity_margin">
+        <Button
+            android:id="@+id/ui_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/ui_images_button"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:onClick="launchImagesActivity"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

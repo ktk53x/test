@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    tools:context=".OrderActivity">
+    <TextView
+        android:id="@+id/delivey_method_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginBottom="@dimen/text_margin_bottom"
+        android:textSize="18sp"
+        android:text="@string/delivery_method_TextView"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/delivey_method_TextView">
+        <RadioButton
+            android:id="@+id/same_day_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/same_day_radioButton"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/next_day_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_day_radioButton"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/pick_up_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_up_radioButton"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+</RelativeLayout>

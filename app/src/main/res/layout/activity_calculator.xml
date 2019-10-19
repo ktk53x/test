@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    tools:context=".CalculatorActivity">
+
+    <EditText
+        android:id="@+id/first_number_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/first_number_editText"/>
+
+    <EditText
+        android:id="@+id/second_number_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_number_editText"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/second_number_editText"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_number_editText"
+        android:text="@string/add_button"
+        android:onClick="onAdd"/>
+
+    <Button
+        android:id="@+id/sub_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/add_button"
+        android:layout_toEndOf="@+id/add_button"
+        android:layout_below="@+id/second_number_editText"
+        android:text="@string/sub_button"
+        android:onClick="onSub"/>
+
+    <Button
+        android:id="@+id/mul_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_button"
+        android:layout_toRightOf="@+id/div_button"
+        android:layout_toEndOf="@+id/div_button"
+        android:text="@string/mul_button"
+        android:onClick="onMul"/>
+
+    <Button
+        android:id="@+id/div_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_button"
+        android:text="@string/div_button"
+        android:onClick="onDiv"/>
+
+    <TextView
+        android:id="@+id/result_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/div_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    tools:context=".ScrollActivity">
+    <TextView
+        android:id="@+id/article_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/padding_regular"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textStyle="bold"
+        android:text="@string/article_title_textView"/>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_title_textView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/article_subtitle_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular"
+                android:textAppearance="@android:style/TextAppearance"
+                android:text="@string/article_subtitle_textView"/>
+
+            <TextView
+                android:id="@+id/article_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:autoLink="web"
+                android:text="@string/article_textView"
+                android:padding="@dimen/padding_regular"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
